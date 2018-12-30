@@ -1,12 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Helmet } from 'react-helmet';
+import WebFontLoader from 'webfontloader';
+import { createGlobalStyle } from 'styled-components'
+import Template from './Template';
+import config from './config';
+import 'normalize.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const { theme, layout } = config();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+WebFontLoader.load({
+  google: {
+    families: theme.font.family
+  }
+});
+
+console.log('theme=', theme);
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${theme.colors.background};
+    font-family: ${theme.font.family[0]};
+    font-size: ${theme.font.size};
+    color: ${theme.colors.dark};
+    -webkit-font-smoothing: antialiased;
+  }
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+`
+ReactDOM.render(
+  <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Codecraftor - Pioneer Template</title>
+      <link rel="canonical" href="https://codecraftor.com" />
+    </Helmet>
+    <GlobalStyle />
+    <Template theme={theme} layout={layout} />
+  </>,
+  document.getElementById('root')
+);
