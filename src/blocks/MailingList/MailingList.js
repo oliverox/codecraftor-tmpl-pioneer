@@ -19,14 +19,14 @@ const ContentContainer = styled.div`
   margin-bottom: 10px;
   justify-content: center;
   padding: 35px 35px 50px 35px;
-  border-bottom: 2px solid
-    ${props => (props.theme ? props.theme.colors.dark : '#fff')};
+  border-bottom: ${({ withBottomBorder, theme }) =>
+    withBottomBorder ? `2px solid ${theme.colors.dark}` : '0'}};
 `;
 
-const MailingList = ({ theme }) => {
+const MailingList = ({ theme, withBottomBorder }) => {
   return (
     <StyledMailingListBlock theme={theme}>
-      <ContentContainer theme={theme}>
+      <ContentContainer theme={theme} withBottomBorder={withBottomBorder}>
         <Subscribe
           theme={theme}
           layoutStyle="row"
@@ -37,6 +37,10 @@ const MailingList = ({ theme }) => {
       </ContentContainer>
     </StyledMailingListBlock>
   );
+};
+
+MailingList.defaultProps = {
+  withBottomBorder: true
 };
 
 export default MailingList;

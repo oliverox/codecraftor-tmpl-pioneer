@@ -1,6 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Hero, Team, Features, Mission, NavigationBar, MailingList } from './blocks';
+import {
+  Hero,
+  Team,
+  Features,
+  Mission,
+  NavigationBar,
+  MailingList,
+  Footer
+} from './blocks';
 
 const StyledTemplate = styled.div`
   width: 100%;
@@ -16,7 +24,8 @@ const Template = ({ theme, layout }) => {
       <Features theme={theme} />
       <Team theme={theme} />
       <Mission theme={theme} />
-      <MailingList theme={theme} />
+      <MailingList theme={theme} withBottomBorder={false} />
+      <Footer theme={theme} />
     </StyledTemplate>
   );
 };
