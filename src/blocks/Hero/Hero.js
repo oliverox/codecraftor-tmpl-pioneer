@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H1, Logo, Button } from '../../components';
+import { H1, Logo, Subscribe } from '../../components';
 
 const StyledHeroBlock = styled.section`
   display: flex;
@@ -32,47 +32,18 @@ const StyledSubtitle = styled.span`
 
 const LeftSection = styled.div`
   flex: 1;
+  padding-right: 50px;
 `;
 
 const RightSection = styled.div`
-  width: 300px;
-  padding: 50px;
+  width: 350px;
   background-position: left;
   background-size: 2px 6px;
   background-repeat: repeat-y;
-  background-image: linear-gradient(${props => (props.theme ? props.theme.colors.light : '#f00')} 30%, rgba(255, 255, 255, 0) 0%);
-`;
-
-const RightSectionTitle = styled.span`
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-`;
-
-const RightSectionText = styled.span`
-  font-size: 16px;
-  line-height: 26px;
-  font-family: ${props =>
-    props.theme ? props.theme.font.family[1] : 'inherit'};
-`;
-
-const RightSectionEmailContainer = styled.div`
-  display: flex;
-  margin-top: 20px;
-`;
-
-const RightSectionEmailInput = styled.input`
-  flex: 1;
-  border: 0;
-  height: 40px;
-  font-size: 16px;
-  font-weight: bold;
-  padding-left: 10px;
-  margin-right: 2px;
-  letter-spacing: 1px;
+  background-image: linear-gradient(
+    ${props => (props.theme ? props.theme.colors.light : '#f00')} 30%,
+    rgba(255, 255, 255, 0) 0%
+  );
 `;
 
 const HeroBlock = ({
@@ -93,23 +64,8 @@ const HeroBlock = ({
           <StyledSubtitle theme={theme}>{subTitle}</StyledSubtitle>
         </LeftSection>
         {showSubscribeSection && (
-          <RightSection theme={theme}>
-            <RightSectionTitle>{subscribeSectionTitle}</RightSectionTitle>
-            <RightSectionText theme={theme}>
-              {subscribeSectionText}
-            </RightSectionText>
-            <RightSectionEmailContainer>
-              <RightSectionEmailInput
-                placeholder="Email address"
-                type="email"
-                autoCapitalize="off"
-                autoComplete="off"
-                autoCorrect="off"
-              />
-              <Button intent="background" theme={theme}>
-                Subscribe
-              </Button>
-            </RightSectionEmailContainer>
+          <RightSection theme={theme} >
+            <Subscribe theme={theme} />
           </RightSection>
         )}
       </ContentContainer>

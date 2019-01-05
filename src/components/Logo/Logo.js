@@ -20,7 +20,7 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${props =>
-    props.theme ? props.theme.colors.background : '#fff'};
+    props.theme ? props.theme.colors.primary : '#fff'};
 `;
 
 const Logo = ({ theme, title, Svg }) => {

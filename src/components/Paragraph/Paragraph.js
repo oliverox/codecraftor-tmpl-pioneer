@@ -11,4 +11,5 @@ const Paragraph = ({ theme, children }) => {
   return <StyledParagraph theme={theme}>{children}</StyledParagraph>;
 };
 
+export { StyledParagraph };
 export default Paragraph;

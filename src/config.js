@@ -1,12 +1,12 @@
 export default () => ({
   theme: {
     colors: {
-      background: '#FFE44B', // yellow
-      primary: '#172a3b', // dark blue
-      secondary: '#F9B82B', // dark yellow
-      tertiary: '#f9b82b',
-      quaternary: '#C44536',
-      light: '#e4e6e8',
+      background: '#FFF', // white
+      primary: '#FFE44B', // yellow
+      secondary: '#172a3b', // dark blue
+      tertiary: '#f9b82b', // dark yellow  
+      quaternary: '#e4e6e8',
+      light: '#e4e6e8', // light gray
       dark: '#172A3B'
     },
     font: {

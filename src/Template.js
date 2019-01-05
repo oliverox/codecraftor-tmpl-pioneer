@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Hero, Features, NavigationBar } from './blocks';
+import { Hero, Team, Features, Mission, NavigationBar, MailingList } from './blocks';
 
 const StyledTemplate = styled.div`
   width: 100%;
@@ -14,6 +14,9 @@ const Template = ({ theme, layout }) => {
       <NavigationBar theme={theme} layout={layout} />
       <Hero theme={theme} showSubscribeSection={true} />
       <Features theme={theme} />
+      <Team theme={theme} />
+      <Mission theme={theme} />
+      <MailingList theme={theme} />
     </StyledTemplate>
   );
 };
