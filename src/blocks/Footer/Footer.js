@@ -18,7 +18,6 @@ const ContentContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
 `;
 
 const CopyrightInfo = styled.div`
@@ -34,7 +33,7 @@ const FooterMenu = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  margin-right: 20px;
+  padding: 12px;
   text-transform: uppercase;
 `;
 
