@@ -1,9 +1,10 @@
 var path = require('path');
 
 module.exports = {
-  entry: './index.js',
+  entry: './main.js',
   externals: {
-    'react': 'react'
+    'react': 'react',
+    'react-dom': 'react-dom'
   },
   module: {
     rules: [
