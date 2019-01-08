@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   entry: './main.js',
   externals: {
-    'react': 'react',
+    react: 'react',
     'react-dom': 'react-dom'
   },
   module: {
@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        use: ['@svgr/webpack', 'url-loader'],
       }
     ]
   },
