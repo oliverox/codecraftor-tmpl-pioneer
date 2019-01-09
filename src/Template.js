@@ -8,7 +8,7 @@ import {
   NavigationBar,
   MailingList,
   Footer
-} from './blocks';
+} from './block-components';
 
 const StyledTemplate = styled.div`
   width: 100%;

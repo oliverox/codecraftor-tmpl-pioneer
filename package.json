@@ -1,6 +1,6 @@
 {
   "name": "@codecraftor/pioneer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "main": "dist/main.js",
   "dependencies": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf ./dist && webpack --mode production --config ./config/webpack.config.js",
+    "build": "rm -rf ./dist && webpack --mode production --config ./webpack.config.js",
     "prepublish": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
