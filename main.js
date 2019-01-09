@@ -7,12 +7,40 @@ import Features from './src/blocks/Features/Features';
 import MailingList from './src/blocks/MailingList/MailingList';
 import NavigationBar from './src/blocks/NavigationBar/NavigationBar';
 
+// components
+import {
+  H1,
+  H2,
+  Link,
+  Text,
+  Logo,
+  Button,
+  Paragraph,
+  Subscribe,
+  StyledText,
+  StyledParagraph
+} from './src/components';
+
 export default {
-  Hero,
-  Team,
-  Footer,
-  Mission,
-  Features,
-  MailingList,
-  NavigationBar
+  blocks: {
+    Hero,
+    Team,
+    Footer,
+    Mission,
+    Features,
+    MailingList,
+    NavigationBar
+  },
+  components: {
+    H1,
+    H2,
+    Link,
+    Text,
+    Logo,
+    Button,
+    Paragraph,
+    Subscribe,
+    StyledText,
+    StyledParagraph
+  }
 };
