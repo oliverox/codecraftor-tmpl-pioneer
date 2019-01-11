@@ -16,8 +16,9 @@ const ContentContainer = styled.div`
   max-width: 1140px;
   margin-bottom: 10px;
   justify-content: center;
-  border-bottom: 2px solid;
   padding: 45px 35px 50px 35px;
+  border-bottom: ${props =>
+    props.showBottomBorder && props.theme.colors ? `2px solid ${props.theme.colors.background}` : 0};
 `;
 
 const ConstrainedText = styled.div`
@@ -26,10 +27,15 @@ const ConstrainedText = styled.div`
   max-width: 650px;
 `;
 
-const MissionBlock = ({ theme, backgroundStyle, content }) => {
+const MissionBlock = ({
+  theme,
+  backgroundStyle,
+  content,
+  showBottomBorder
+}) => {
   return (
     <StyledMissionBlock theme={theme} backgroundStyle={backgroundStyle}>
-      <ContentContainer>
+      <ContentContainer theme={theme} showBottomBorder={showBottomBorder}>
         <ConstrainedText>
           <H2>{content}</H2>
         </ConstrainedText>
@@ -39,14 +45,9 @@ const MissionBlock = ({ theme, backgroundStyle, content }) => {
 };
 
 MissionBlock.defaultProps = {
-  backgroundStyle: 'quaternary',
-  content: `The world is full of extraordinarily creative people that are 
-  struggling to fit in. They find their current life is too bland. They’ve 
-  read all the books in the local library. They don’t find lectures engaging. 
-  They just want to go somewhere more interesting, where they can be with peers 
-  that will motivate them. Our goal is to provide the necessary funding, 
-  guidance and community in order to nurture those minds into the great 
-  scientists, artists and entrepreneurs of the future.`
+  backgroundStyle: 'transparent',
+  showBottomBorder: true,
+  content: 'The world is but one country and mankind its citizens.'
 };
 
 export default MissionBlock;

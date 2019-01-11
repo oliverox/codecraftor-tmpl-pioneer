@@ -19,8 +19,8 @@ const ContentContainer = styled.div`
   margin-bottom: 10px;
   justify-content: center;
   padding: 35px 35px 50px 35px;
-  border-bottom: 2px solid
-    ${props => (props.theme ? props.theme.colors.background : '#fff')};
+  border-bottom: ${props =>
+    props.showBottomBorder && props.theme.colors ? `2px solid ${props.theme.colors.background}` : 0};
 `;
 
 const StyledSubtitle = styled.span`
@@ -49,23 +49,29 @@ const RightSection = styled.div`
 const HeroBlock = ({
   theme,
   showLogo,
+  logoTitle,
   showSubscribeSection,
   title,
   subTitle,
   subscribeSectionTitle,
-  subscribeSectionText
+  subscribeSectionText,
+  showBottomBorder
 }) => {
   return (
     <StyledHeroBlock theme={theme}>
-      <ContentContainer theme={theme}>
+      <ContentContainer theme={theme} showBottomBorder={showBottomBorder}>
         <LeftSection>
-          {showLogo && <Logo theme={theme} />}
+          {showLogo && <Logo theme={theme} title={logoTitle} />}
           <H1>{title}</H1>
           <StyledSubtitle theme={theme}>{subTitle}</StyledSubtitle>
         </LeftSection>
         {showSubscribeSection && (
-          <RightSection theme={theme} >
-            <Subscribe theme={theme} />
+          <RightSection theme={theme}>
+            <Subscribe
+              theme={theme}
+              subscribeSectionTitle={subscribeSectionTitle}
+              subscribeSectionText={subscribeSectionText}
+            />
           </RightSection>
         )}
       </ContentContainer>
@@ -75,13 +81,15 @@ const HeroBlock = ({
 
 HeroBlock.defaultProps = {
   showLogo: true,
+  logoTitle: 'Pioneer',
   showSubscribeSection: true,
   subscribeSectionTitle: 'Stay up to date',
   subscribeSectionText:
     'The Pioneer Tournament runs monthly. Enter your email to get occasional updates from us, including when we open our doors again for applicants.',
   title: 'A home for the ambitious outsiders of the world',
   subTitle:
-    'We’re building a community of creative young people working on interesting projects around the globe.'
+    'We’re building a community of creative young people working on interesting projects around the globe.',
+  showBottomBorder: true
 };
 
 export default HeroBlock;
