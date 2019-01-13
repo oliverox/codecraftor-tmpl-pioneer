@@ -15,7 +15,7 @@ export default {
     {
       prop: 'backgroundStyle',
       label: 'Background color',
-      type: 'list',
+      type: 'dropdown',
       value: 'transparent',
       list: [
         {

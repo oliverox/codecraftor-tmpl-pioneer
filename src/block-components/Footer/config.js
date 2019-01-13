@@ -3,5 +3,50 @@ export default {
   type: 'Footer',
   icon: 'widget-footer',
   desc: 'A footer section with copyright information and a bunch of links.',
-  config: [{}]
+  config: [
+    {
+      prop: 'showCopyrightInfo',
+      label: 'Show copyright text?',
+      type: 'yesno',
+      value: true
+    },
+    {
+      prop: 'copyrightText',
+      label: 'Copyright text',
+      type: 'string',
+      value: '© 2019 Codecraftor',
+      placeholder: 'Type a copyright text'
+    },
+    {
+      prop: 'menuLinks',
+      label: 'Menu links',
+      type: 'list',
+      schema: [
+        {
+          prop: 'label',
+          label: 'Label',
+          type: 'string'
+        },
+        {
+          prop: 'goto',
+          label: 'Links to',
+          type: 'string'
+        }
+      ],
+      value: [
+        {
+          label: 'Home',
+          goto: '/'
+        },
+        {
+          label: 'Contact us',
+          goto: '/contact'
+        },
+        {
+          label: 'FAQ',
+          goto: '/faq'
+        }
+      ]
+    }
+  ]
 };

@@ -41,7 +41,7 @@ const FooterBlock = ({
   theme,
   showCopyrightInfo,
   copyrightText,
-  footerMenu
+  menuLinks
 }) => {
   return (
     <StyledFooterBlock theme={theme}>
@@ -50,13 +50,14 @@ const FooterBlock = ({
           <CopyrightInfo theme={theme}>{copyrightText}</CopyrightInfo>
         )}
         <FooterMenu>
-          {footerMenu.map((footer, key) => {
-            return (
-              <StyledLink key={key} goto={footer.goto} theme={theme}>
-                {footer.label}
-              </StyledLink>
-            );
-          })}
+          {menuLinks.map((footer, key) => (
+            <StyledLink
+              key={key}
+              goto={footer.goto}
+              theme={theme}
+              label={footer.label}
+            />
+          ))}
         </FooterMenu>
       </ContentContainer>
     </StyledFooterBlock>
@@ -66,7 +67,7 @@ const FooterBlock = ({
 FooterBlock.defaultProps = {
   showCopyrightInfo: true,
   copyrightText: '© 2019 Codecraftor',
-  footerMenu: [
+  menuLinks: [
     {
       label: 'Twitter',
       goto: '#'

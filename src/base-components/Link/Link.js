@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import styles from './Link.module.css';
-
 const StyledLink = styled.a`
   letter-spacing: 1.2px;
   text-decoration: none;
