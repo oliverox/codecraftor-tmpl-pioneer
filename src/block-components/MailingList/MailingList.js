@@ -23,16 +23,22 @@ const ContentContainer = styled.div`
     withBottomBorder ? `2px solid ${theme.colors.dark}` : '0'}};
 `;
 
-const MailingList = ({ theme, withBottomBorder }) => {
+const MailingList = ({
+  theme,
+  withBottomBorder,
+  subscribeButtonFontColor,
+  subscribeButtonBackgroundStyle,
+  subscribeSectionText
+}) => {
   return (
     <StyledMailingListBlock theme={theme}>
       <ContentContainer theme={theme} withBottomBorder={withBottomBorder}>
         <Subscribe
           theme={theme}
           layoutStyle="row"
-          subscribeButtonFontStyle="background"
-          subscribeButtonBackgroundStyle="secondary"
-          subscribeSectionText="Interested in how this program fares? Enter your email to receive our updates."
+          subscribeButtonFontStyle={subscribeButtonFontColor}
+          subscribeButtonBackgroundStyle={subscribeButtonBackgroundStyle}
+          subscribeSectionText={subscribeSectionText}
         />
       </ContentContainer>
     </StyledMailingListBlock>
@@ -40,7 +46,11 @@ const MailingList = ({ theme, withBottomBorder }) => {
 };
 
 MailingList.defaultProps = {
-  withBottomBorder: true
+  withBottomBorder: true,
+  subscribeButtonFontColor: 'background',
+  subscribeButtonBackgroundStyle: 'secondary',
+  subscribeSectionText:
+    'Interested to learn more about what we do? Enter your email to receive our bi-weekly updates.'
 };
 
 export default MailingList;

@@ -2,7 +2,7 @@
 import Root from './src/block-components/Root';
 import Hero, { config as HeroConfig } from './src/block-components/Hero';
 import Team, { config as TeamConfig } from './src/block-components/Team';
-import Test, { config as TestConfig } from './src/block-components/Test';
+// import Test, { config as TestConfig } from './src/block-components/Test';
 import Footer, { config as FooterConfig } from './src/block-components/Footer';
 import Mission, {
   config as MissionConfig
@@ -44,10 +44,10 @@ export default {
       config: TeamConfig,
       module: Team
     },
-    Test: {
-      config: TestConfig,
-      module: Test
-    },
+    // Test: {
+    //   config: TestConfig,
+    //   module: Test
+    // },
     Footer: {
       config: FooterConfig,
       module: Footer

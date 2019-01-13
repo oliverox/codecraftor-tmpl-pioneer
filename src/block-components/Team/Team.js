@@ -82,8 +82,8 @@ const TeamBlock = ({ theme, backgroundStyle, ...props }) => {
       <ContentContainer>
         {props.showExcerpt && (
           <Excerpt>
-            <H2>{props.excertTitle}</H2>
-            <ExcerptText theme={theme}>{props.excertText}</ExcerptText>
+            <H2>{props.excerptTitle}</H2>
+            <ExcerptText theme={theme}>{props.excerptText}</ExcerptText>
           </Excerpt>
         )}
         {teamMembers.map((member, key) => (
@@ -98,7 +98,7 @@ const TeamBlock = ({ theme, backgroundStyle, ...props }) => {
           (!props.showExcerpt && props.members.length > 8)) && (
           <ActionButtonContainer>
             <Button theme={theme} fontStyle="dark" backgroundStyle="background" withBorder={true}>
-              See all
+              {props.actionButtonLabel}
             </Button>
           </ActionButtonContainer>
         )}
@@ -108,66 +108,57 @@ const TeamBlock = ({ theme, backgroundStyle, ...props }) => {
 };
 
 TeamBlock.defaultProps = {
-  backgroundStyle: 'background',
-  showExcerpt: true,
-  excertTitle: 'World class team members',
-  excertText:
+  backgroundStyle: 'transparent',
+  showExcerpt: false,
+  excerptTitle: 'World class team members',
+  excerptText:
     'Lorem ipsum dolor sit amet, in delenit maiestatis qui, ei vis posse porro. Minimum suscipit delectus id sit, pro diam paulo te. Mea rebum vocibus et, at hinc dicat consul cum, at cum eius intellegebat.',
   members: [
     {
       photoUrl:
         'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
+      name: 'Isabelle Gardiner',
+      department: 'Design',
+      role: 'Head of design'
     },
     {
       photoUrl:
         'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
+      name: 'Aaliya Stokes',
+      department: 'Design',
+      role: 'UX designer'
     },
     {
       photoUrl:
         'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
+      name: 'Nikki Mooney',
+      department: 'Engineering',
+      role: 'Lead developer'
     },
     {
       photoUrl:
         'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
+      name: 'Owen Arias',
+      department: 'Engineering',
+      role: 'Senior developer'
     },
     {
       photoUrl:
         'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
+      name: 'Matt Salgado',
+      department: 'Engineering',
+      role: 'Junior developer'
     },
     {
       photoUrl:
         'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
-    },
-    {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
-      name: 'Hollis Robbins',
-      department: 'Art',
-      role: 'Dean of Arts & Humanities, Sonoma State University'
+      name: 'Sulaiman Gomez',
+      department: 'Marketing',
+      role: 'Sales and marketing rep'
     }
   ],
-  actionButton: {
-    label: 'See all',
-    linkTo: '#'
-  }
+  actionButtonLabel: 'See all',
+  actionButtonLinkTo: '#'
 };
 
 export default TeamBlock;

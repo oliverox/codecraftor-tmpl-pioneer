@@ -47,7 +47,11 @@ const MissionBlock = ({
 MissionBlock.defaultProps = {
   backgroundStyle: 'transparent',
   showBottomBorder: true,
-  content: 'The world is but one country and mankind its citizens.'
+  content: `Your vision statement should be an audacious dream of a future reality based 
+            on the work you do. It should be bursting-at-the-seams with possibility. It’s 
+            where “begin with the end in mind” lives. It’s the heart and DNA construct of 
+            your organization. Your vision should be so big, it feels nearly impossible. 
+            Your vision should require people to dream.`
 };
 
 export default MissionBlock;

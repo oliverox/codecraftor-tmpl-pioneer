@@ -81,15 +81,13 @@ const HeroBlock = ({
 
 HeroBlock.defaultProps = {
   showLogo: true,
-  logoTitle: 'Pioneer',
-  showSubscribeSection: true,
-  subscribeSectionTitle: 'Stay up to date',
-  subscribeSectionText:
-    'The Pioneer Tournament runs monthly. Enter your email to get occasional updates from us, including when we open our doors again for applicants.',
-  title: 'A home for the ambitious outsiders of the world',
-  subTitle:
-    'We’re building a community of creative young people working on interesting projects around the globe.',
-  showBottomBorder: true
+  logoTitle: 'Company Name',
+  showSubscribeSection: false,
+  subscribeSectionTitle: 'Subscribe me please',
+  subscribeSectionText: 'Enter your email below to subscribe to our newsletter.',
+  title: 'Beyond the impossible',
+  subTitle: 'We develop amazing things at an amazing pace.',
+  showBottomBorder: false
 };
 
 export default HeroBlock;

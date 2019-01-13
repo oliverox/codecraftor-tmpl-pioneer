@@ -1,7 +1,7 @@
 import Root from './Root/Root';
 import Hero from './Hero/Hero';
 import Team from './Team/Team';
-import Test from './Test/Test';
+// import Test from './Test/Test';
 import Footer from './Footer/Footer';
 import Mission from './Mission/Mission';
 import Features from './Features/Features';
@@ -12,7 +12,7 @@ export {
   Root,
   Hero,
   Team,
-  Test,
+  // Test,
   Footer,
   Mission,
   Features,

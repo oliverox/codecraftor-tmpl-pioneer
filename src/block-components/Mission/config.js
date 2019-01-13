@@ -2,15 +2,14 @@ export default {
   name: 'Mission',
   type: 'Mission',
   icon: 'crown',
-  desc: 'A section to clearly display your mission statement (or any quote).',
+  desc: 'A section to clearly display your mission statement, vision, or any quote.',
   config: [
     {
       prop: 'content',
-      label: 'Mission statement',
+      label: 'Visionary statement',
       type: 'string',
-      value:
-        'Regard man as a mine rich in gems of inestimable value. Education can, alone, cause it to reveal its treasures, and enable mankind to benefit there from.',
-      placeholder: 'Type a mission statement'
+      value: 'Your vision statement should be an audacious dream of a future reality based on the work you do. It should be bursting-at-the-seams with possibility. It’s where “begin with the end in mind” lives. It’s the heart and DNA construct of your organization. Your vision should be so big, it feels nearly impossible. Your vision should require people to dream.',
+      placeholder: 'Type some visionary stuff'
     },
     {
       prop: 'backgroundStyle',

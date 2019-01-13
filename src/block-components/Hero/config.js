@@ -15,49 +15,48 @@ export default {
       prop: 'logoTitle',
       label: 'Logo title',
       type: 'string',
-      value: 'Pioneer'
-    },
-    {
-      prop: 'showSubscribeSection',
-      label: 'Display "Subscribe" section?',
-      type: 'yesno',
-      value: true
-    },
-    {
-      prop: 'subscribeSectionTitle',
-      label: 'Subscribe section title',
-      type: 'string',
-      value: 'Stay up to date',
-      placeholder: 'Type a title'
-    },
-    {
-      prop: 'subscribeSectionText',
-      label: 'Subscribe section outline',
-      type: 'string',
-      value:
-        'The Pioneer Tournament runs monthly. Enter your email to get occasional updates from us, including when we open our doors again for applicants.',
-      placeholder: 'Type a short outline'
+      value: 'Company Name'
     },
     {
       prop: 'title',
       label: 'Section title',
       type: 'string',
-      value: 'A home for the ambitious outsiders of the world',
+      value: 'Beyond the impossible',
       placeholder: 'Type a title'
     },
     {
-      prop: 'subtitle',
+      prop: 'subTitle',
       label: 'Section subtitle',
       type: 'string',
-      value:
-        "We're building a community of creative young people working on interesting projects around the globe.",
-      placeholder: 'Type a subtitle'
+      value: 'We develop amazing things at an amazing pace.',
+      placeholder: 'Type a sub title'
+    },
+    {
+      prop: 'showSubscribeSection',
+      label: 'Display "Subscribe" section?',
+      type: 'yesno',
+      value: false
+    },
+    {
+      prop: 'subscribeSectionTitle',
+      label: 'Subscribe me',
+      type: 'string',
+      value: 'Subscribe me please',
+      placeholder: 'Type a subscription title'
+    },
+    {
+      prop: 'subscribeSectionText',
+      label: 'Subscribe section outline',
+      type: 'string',
+      multiline: true,
+      value: 'Enter your email below to subscribe to our newsletter.',
+      placeholder: 'Type a short outline'
     },
     {
       prop: 'showBottomBorder',
       label: 'Show bottom section border?',
       type: 'yesno',
-      value: true
+      value: false
     }
   ]
 };

@@ -64,7 +64,12 @@ const FeaturesBlock = ({
                   theme={theme}
                   featureImgBackgroundStyle={featureImgBackgroundStyle}
                 >
-                  {feature.image}
+                  {typeof feature.image === 'string' &&
+                  feature.image.length > 0 ? (
+                    <img src={feature.image} alt="Feature" width={460} />
+                  ) : (
+                    feature.image
+                  )}
                 </FeatureImg>
                 <H2>{feature.title}</H2>
                 <Paragraph theme={theme}>{feature.description}</Paragraph>
@@ -78,20 +83,20 @@ const FeaturesBlock = ({
 };
 
 FeaturesBlock.defaultProps = {
-  backgroundStyle: 'primary',
+  backgroundStyle: 'transparent',
   featureImgBackgroundStyle: 'dark',
   features: [
     {
-      title: 'Feature Un',
+      title: 'Elegant and beautiful templates',
       description: `Lorem ipsum dolor sit amet, in delenit maiestatis qui,
         ei vis posse porro. Minimum suscipit delectus id sit, pro diam paulo 
         te. Mea rebum vocibus et, at hinc dicat consul cum, at cum eius 
         intellegebat. Nihil delenit mea at. Illud epicurei euripidis ea eos, 
         saperet fierent sea ut.`,
-      image: <MdLooksOne size="10em" fill="#FFE44B"/>
+      image: <MdLooksOne size="10em" fill="#FFE44B" />
     },
     {
-      title: 'Feature Deux',
+      title: 'Clean code',
       description: `Lorem ipsum dolor sit amet, in delenit maiestatis qui,
         ei vis posse porro. Minimum suscipit delectus id sit, pro diam paulo 
         te. Mea rebum vocibus et, at hinc dicat consul cum, at cum eius 
@@ -100,7 +105,7 @@ FeaturesBlock.defaultProps = {
       image: <MdLooksTwo size="10em" fill="#FFE44B" />
     },
     {
-      title: 'Feature Trois',
+      title: 'Support is just a message away',
       description: `Lorem ipsum dolor sit amet, in delenit maiestatis qui,
         ei vis posse porro. Minimum suscipit delectus id sit, pro diam paulo 
         te. Mea rebum vocibus et, at hinc dicat consul cum, at cum eius 
@@ -109,7 +114,7 @@ FeaturesBlock.defaultProps = {
       image: <MdLooks3 size="10em" fill="#FFE44B" />
     },
     {
-      title: 'Feature Quatre',
+      title: 'Customizable themes and components',
       description: `Lorem ipsum dolor sit amet, in delenit maiestatis qui,
         ei vis posse porro. Minimum suscipit delectus id sit, pro diam paulo 
         te. Mea rebum vocibus et, at hinc dicat consul cum, at cum eius 

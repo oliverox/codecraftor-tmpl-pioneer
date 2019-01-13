@@ -25,13 +25,13 @@ const LinkContainer = styled.div`
   padding: 12px;
 `;
 
-const NavigationBarBlock = ({ theme, layout, items }) => {
+const NavigationBarBlock = ({ theme, menuLinks }) => {
   return (
     <NavContainer theme={theme}>
       <StyledNavigationBar theme={theme}>
-        {items.map((item, key) => (
+        {menuLinks.map((item, key) => (
           <LinkContainer key={`navbarItem-${key}`}>
-            <Link goto={item.linkTo} theme={theme}>
+            <Link goto={item.goto} theme={theme}>
               {item.label}
             </Link>
           </LinkContainer>
@@ -42,26 +42,18 @@ const NavigationBarBlock = ({ theme, layout, items }) => {
 };
 
 NavigationBarBlock.defaultProps = {
-  items: [
+  menuLinks: [
     {
       label: 'Home',
-      linkTo: '#'
+      goto: '#'
     },
     {
       label: 'Features',
-      linkTo: '#'
+      goto: '#'
     },
     {
       label: 'Team',
-      linkTo: '#'
-    },
-    {
-      label: 'About',
-      linkTo: '#'
-    },
-    {
-      label: 'Contact',
-      linkTo: '#'
+      goto: '#'
     }
   ]
 };

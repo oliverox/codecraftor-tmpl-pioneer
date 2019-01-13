@@ -35,16 +35,24 @@ export default {
       ],
       value: [
         {
-          label: 'Home',
-          goto: '/'
-        },
-        {
-          label: 'Contact us',
-          goto: '/contact'
+          label: 'Twitter',
+          goto: '#'
         },
         {
           label: 'FAQ',
-          goto: '/faq'
+          goto: '#'
+        },
+        {
+          label: 'About us',
+          goto: '#'
+        },
+        {
+          label: 'Privacy',
+          goto: '#'
+        },
+        {
+          label: 'Terms',
+          goto: '#'
         }
       ]
     }
