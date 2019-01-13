@@ -97,7 +97,12 @@ const TeamBlock = ({ theme, backgroundStyle, ...props }) => {
         {((props.showExcerpt && props.members.length > 6) ||
           (!props.showExcerpt && props.members.length > 8)) && (
           <ActionButtonContainer>
-            <Button theme={theme} fontStyle="dark" backgroundStyle="background" withBorder={true}>
+            <Button
+              theme={theme}
+              fontStyle="dark"
+              backgroundStyle="background"
+              withBorder={true}
+            >
               {props.actionButtonLabel}
             </Button>
           </ActionButtonContainer>
@@ -115,43 +120,37 @@ TeamBlock.defaultProps = {
     'Lorem ipsum dolor sit amet, in delenit maiestatis qui, ei vis posse porro. Minimum suscipit delectus id sit, pro diam paulo te. Mea rebum vocibus et, at hinc dicat consul cum, at cum eius intellegebat.',
   members: [
     {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
+      photoUrl: 'https://codecraftor.com/images/pioneer/team-placeholder.jpg',
       name: 'Isabelle Gardiner',
       department: 'Design',
       role: 'Head of design'
     },
     {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
+      photoUrl: 'https://codecraftor.com/images/pioneer/team-placeholder.jpg',
       name: 'Aaliya Stokes',
       department: 'Design',
       role: 'UX designer'
     },
     {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
+      photoUrl: 'https://codecraftor.com/images/pioneer/team-placeholder.jpg',
       name: 'Nikki Mooney',
       department: 'Engineering',
       role: 'Lead developer'
     },
     {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
+      photoUrl: 'https://codecraftor.com/images/pioneer/team-placeholder.jpg',
       name: 'Owen Arias',
       department: 'Engineering',
       role: 'Senior developer'
     },
     {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
+      photoUrl: 'https://codecraftor.com/images/pioneer/team-placeholder.jpg',
       name: 'Matt Salgado',
       department: 'Engineering',
       role: 'Junior developer'
     },
     {
-      photoUrl:
-        'https://d1zhjck9imo0be.cloudfront.net/assets/views/landing/experts/hollis-robbins@2x-be5617c3c82ff6b3d241b00877a26f9e9c313a5c44dd0b6c965f4a0f875a1a1c.jpg',
+      photoUrl: 'https://codecraftor.com/images/pioneer/team-placeholder.jpg',
       name: 'Sulaiman Gomez',
       department: 'Marketing',
       role: 'Sales and marketing rep'
