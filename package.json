@@ -1,6 +1,6 @@
 {
   "name": "@codecraftor/pioneer",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "main": "dist/main.js",
   "dependencies": {
     "react": "^16.7.0",
@@ -22,6 +22,9 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "peerDependencies": {
+    "styled-components": "^4.1.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
@@ -32,7 +35,6 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.2.2",
     "react-scripts": "^2.1.3",
-    "styled-components": "^4.1.3",
     "webfontloader": "^1.6.28",
     "webpack-cli": "^3.2.1"
   }

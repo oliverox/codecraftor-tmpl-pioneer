@@ -66,7 +66,7 @@ const FeaturesBlock = ({
                 >
                   {typeof feature.image === 'string' &&
                   feature.image.length > 0 ? (
-                    <img src={feature.image} alt="Feature" width={460} />
+                    <img src={feature.image} alt="Feature" height={170} />
                   ) : (
                     feature.image
                   )}

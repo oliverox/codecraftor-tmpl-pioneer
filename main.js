@@ -31,6 +31,8 @@ import {
   StyledParagraph
 } from './src/base-components';
 
+export { Root, Hero, Team, Footer, Mission, Features, MailingList, NavigationBar };
+
 export default {
   block: {
     Root: {
