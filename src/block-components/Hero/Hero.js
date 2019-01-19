@@ -11,6 +11,11 @@ const StyledHeroBlock = styled.section`
     props.theme ? props.theme.colors.dark : 'inherit'};
 `;
 
+const StyledH1 = styled(H1)`
+  font-family: "${props => props.theme ? props.theme.font.family[0] : 'Rajdhani'}";
+  font-size: 3em;
+`;
+
 const ContentContainer = styled.div`
   width: 100%;
   display: flex;
@@ -62,7 +67,7 @@ const HeroBlock = ({
       <ContentContainer theme={theme} showBottomBorder={showBottomBorder}>
         <LeftSection>
           {showLogo && <Logo theme={theme} title={logoTitle} />}
-          <H1>{title}</H1>
+          <StyledH1>{title}</StyledH1>
           <StyledSubtitle theme={theme}>{subTitle}</StyledSubtitle>
         </LeftSection>
         {showSubscribeSection && (

@@ -1,6 +1,6 @@
 {
   "name": "@codecraftor/pioneer",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/main.js",
   "dependencies": {
     "react": "^16.7.0",
